@@ -6,15 +6,15 @@ let score = 0;
 let isGameOver = false;
 
 const jump = () => {
-    if (isGameOver) return; // Não permitir pulo se o jogo estiver terminado
+    if (isGameOver) return; 
 
     blob.classList.add('jump');
-    blob.src = './img/robsonpulando.gif'; // Caminho do gif quando o personagem pula
+    blob.src = './img/robsonpulando.gif'; 
 
     setTimeout(() => {
         blob.classList.remove('jump');
-        blob.src = './img/robsoncorrendo2.gif'; // Retorna para o gif padrão de corrida após o pulo
-    }, 300); // Reduzir a duração do pulo para 300ms
+        blob.src = './img/robsoncorrendo2.gif'; 
+    }, 300);
 }
 
 const updateScore = () => {
@@ -30,10 +30,10 @@ const gameOver = () => {
     blob.style.animation = 'none';
 
     blob.src = './img/game-over.png';
-    blob.style.width = '100px'; // Ajustar o tamanho da imagem de game over
-    blob.style.marginLeft = '-50px'; // Centralizar horizontalmente
+    blob.style.width = '100px'; 
+    blob.style.marginLeft = '-50px'; 
 
-    // Ajustar a posição vertical
+    
     blob.style.bottom = '0';
     blob.style.transition = 'bottom 0.3s';
 
@@ -48,8 +48,8 @@ const resetGame = () => {
     scoreDisplay.textContent = 'Score: 0';
     blob.style.bottom = '0';
     blob.src = './img/robsoncorrendo2.gif';
-    blob.style.width = '200px'; // Voltar ao tamanho padrão do personagem
-    blob.style.marginLeft = '0'; // Resetar o margin left
+    blob.style.width = '200px'; 
+    blob.style.marginLeft = '0'; 
 
     loop = setInterval(() => {
         const pipePosition = pipe.offsetLeft;
