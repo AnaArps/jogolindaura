@@ -64,14 +64,14 @@ const resetGame = () => {
 }
 
 document.addEventListener('keydown', (event) => {
-    if (event.keyCode === 32 && isGameOver) { // Tecla espaço para reiniciar o jogo
+    if (event.keyCode === 32 && isGameOver) { 
         resetGame();
-    } else if (event.keyCode === 32) { // Tecla espaço para pular se o jogo não estiver terminado
+    } else if (event.keyCode === 32) {
         jump();
     }
 });
 
-// Iniciar o jogo
+
 let loop = setInterval(() => {
     const pipePosition = pipe.offsetLeft;
     const blobPosition = +window.getComputedStyle(blob).bottom.replace('px', '');
